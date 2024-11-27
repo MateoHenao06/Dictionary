@@ -6,53 +6,58 @@
   <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
+
   <div class="container">
-    <h1>Diccionario de Palabras</h1>
-    <div class="dictionary-section">
-      <label for="orderSelect">Ordenar por:</label>
-      <select id="orderSelect">
-        <option value="en-es">Inglés-Español</option>
-        <option value="es-en">Español-Inglés</option>
-      </select>
-      <button id="sortButton">Ordenar Alfabéticamente</button>
-      <button id="resetButton">Volver a la Lista Original</button>
-      <table id="dictionaryTable">
-        <thead>
-          <tr>
-            <th>Palabra</th>
-            <th>Traducción</th>
-            <th>Ejemplo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Las palabras se añadirán aquí dinámicamente -->
-        </tbody>
-      </table>
-    </div>
-    <div class="filter-section">
-      <h2>Filtrar por Categorías</h2>
-      <div class="radio-buttons">
-        <input type="radio" id="categoryAnimals" name="category" value="animals">
-        <label for="categoryAnimals">Animales</label>
-        <input type="radio" id="categoryFruits" name="category" value="fruits">
-        <label for="categoryFruits">Frutas</label>
-        <input type="radio" id="categoryColors" name="category" value="colors">
-        <label for="categoryColors">Colores</label>
-        <input type="radio" id="categoryPhysicalDescriptions" name="category" value="physical_descriptions">
-        <label for="categoryPhysicalDescriptions">Descripciones físicas</label>
-        <input type="radio" id="categorySkills" name="category" value="skills">
-        <label for="categorySkills">Habilidades</label>
-        <input type="radio" id="categoryVerbs" name="category" value="verbs">
-        <label for="categoryVerbs">Verbos</label>
+
+      <nav>
+        <ul>
+          <li><a href="../index.html">Menú Principal</a></li>
+          <li><a href="./translate.html">Traducir</a></li>
+          <li><a href="./add-word.html">Añadir Palabra</a></li>
+        </ul>
+      </nav>
+      
+      <h1>Diccionario de Palabras</h1>
+      <div class="dictionary-section">
+        <label for="orderSelect">Ordenar por:</label>
+        <select id="orderSelect">
+          <option value="en-es">Inglés-Español</option>
+          <option value="es-en">Español-Inglés</option>
+        </select>
+        <button id="sortButton">Ordenar Alfabéticamente</button>
+        <button id="resetButton">Volver a la Lista Original</button>
+        <table id="dictionaryTable">
+          <thead>
+            <tr>
+              <th>Palabra</th>
+              <th>Traducción</th>
+              <th>Ejemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Las palabras se añadirán aquí dinámicamente -->
+          </tbody>
+        </table>
       </div>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Menú Principal</a></li>
-        <li><a href="./translate.html">Traducir</a></li>
-        <li><a href="./add-word.html">Añadir Palabra</a></li>
-      </ul>
-    </nav>
+
+        <div class="filter-section">
+          <h2>Filtrar por Categorías</h2>
+            <div class="radio-buttons">
+              <input type="radio" id="categoryAnimals" name="category" value="animals">
+              <label for="categoryAnimals">Animales</label>
+              <input type="radio" id="categoryFruits" name="category" value="fruits">
+              <label for="categoryFruits">Frutas</label>
+              <input type="radio" id="categoryColors" name="category" value="colors">
+              <label for="categoryColors">Colores</label>
+              <input type="radio" id="categoryPhysicalDescriptions" name="category" value="physical_descriptions">
+              <label for="categoryPhysicalDescriptions">Descripciones físicas</label>
+              <input type="radio" id="categorySkills" name="category" value="skills">
+              <label for="categorySkills">Habilidades</label>
+              <input type="radio" id="categoryVerbs" name="category" value="verbs">
+              <label for="categoryVerbs">Verbos</label>
+            </div>
+        </div>
+
   </div>
   <script type="module" src="../scripts/dictionary1.js"></script>
 </body>

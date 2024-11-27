@@ -1,9 +1,18 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   color: #333;
   margin: 0;
   padding: 20px;
+  background: #1A2980; 
+  background: -webkit-linear-gradient(to right, #26D0CE, #1A2980); 
+  background: linear-gradient(to right, #26D0CE, #1A2980);
 }
 
 .container {
@@ -13,6 +22,9 @@ body {
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1, h2 {
@@ -20,8 +32,39 @@ h1, h2 {
   color: #007BFF;
 }
 
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  margin-left: 45%;
+  margin-bottom: -80%;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.dictionary-section label {
+  font-size: 20px;
+}
+
 .translation-section, .dictionary-section, .filter-section, .add-word-section {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.filter-section h2 {
+  margin-bottom: 30px;
 }
 
 input[type="text"], select {
@@ -53,36 +96,18 @@ table {
 
 table, th, td {
   border: 1px solid #ccc;
+  margin-top: 18px;
 }
 
 th, td {
+  margin-top: 20px;
   padding: 10px;
   text-align: left;
 }
 
 .radio-buttons label {
-  margin-right: 10px;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  margin: 0 10px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #007BFF;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
+  margin-left: 10px;
+  
 }
 
   

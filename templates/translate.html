@@ -1,44 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Traducir Palabras</title>
   <link rel="stylesheet" href="../styles/styles.css">
 </head>
-<body>
-  <div class="container">
-    <h1>Traducir Palabras</h1>
-    <div class="translation-section">
-      <input type="text" id="wordInput" placeholder="Ingrese una palabra">
-      <select id="languageSelect">
-        <option value="en-es">Inglés a Español</option>
-        <option value="es-en">Español a Inglés</option>
-      </select>
-      <button id="translateButton">Traducir</button>
+
+  <body>
+    <div class="container">
+
+      <nav>
+        <ul>
+          <li><a href="../index.html">Menú Principal</a></li>
+          <li><a href="./dictionary.html">Diccionario</a></li>
+          <li><a href="./add-word.html">Añadir Palabra</a></li>
+        </ul>
+      </nav>
+
+      <h1>Traducir Palabras</h1>
+      <div class="translation-section">
+        <input type="text" id="wordInput" placeholder="Ingrese una palabra">
+        <select id="languageSelect">
+          <option value="en-es">Inglés a Español</option>
+          <option value="es-en">Español a Inglés</option>
+        </select>
+        <button id="translateButton">Traducir</button>
+      </div>
+      <div class="result-section">
+        <h2>Resultado de la Traducción</h2>
+        <table id="resultTable">
+          <thead>
+            <tr>
+              <th>Palabra</th>
+              <th>Traducción</th>
+              <th>Ejemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- El resultado se añadirá aquí dinámicamente -->
+          </tbody>
+        </table>
+      </div>
+      
     </div>
-    <div class="result-section">
-      <h2>Resultado de la Traducción</h2>
-      <table id="resultTable">
-        <thead>
-          <tr>
-            <th>Palabra</th>
-            <th>Traducción</th>
-            <th>Ejemplo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- El resultado se añadirá aquí dinámicamente -->
-        </tbody>
-      </table>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Menú Principal</a></li>
-        <li><a href="./dictionary.html">Diccionario</a></li>
-        <li><a href="./add-word.html">Añadir Palabra</a></li>
-      </ul>
-    </nav>
-  </div>
-  <script type="module" src="../scripts/translate.js"></script>
-</body>
+
+    <script type="module" src="../scripts/translate.js"></script>
+    
+  </body>
 </html>
