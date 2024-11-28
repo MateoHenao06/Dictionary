@@ -1,4 +1,4 @@
-import { dictionary } from './dictionary.js';
+import { dictionary } from './dictionary2.js';
 
 document.getElementById('translateButton').addEventListener('click', function () {
   const word = document.getElementById('wordInput').value.trim().toLowerCase();

@@ -81,3 +81,12 @@ export const dictionary = {
     ]
   }
 }
+
+function initilizeLocalStorage(){
+  if (!localStorage.getItem('dictionary')){
+    localStorage.setItem('dictionary', JSON.stringify(dictionary));
+  }
+}
+
+initilizeLocalStorage();
+

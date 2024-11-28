@@ -1,4 +1,4 @@
-import { dictionary } from './dictionary.js';
+import { dictionary } from './dictionary2.js';
 
 document.getElementById('addWordButton').addEventListener('click', function () {
   const newWordEn = document.getElementById('newWordEn').value.trim();
@@ -6,13 +6,11 @@ document.getElementById('addWordButton').addEventListener('click', function () {
   const newWordExample = document.getElementById('newWordExample').value.trim();
   const newWordCategory = document.getElementById('newWordCategory').value;
 
-  // Validar campos vacíos
   if (!newWordEn || !newWordEs || !newWordExample) {
     alert('Por favor, complete todos los campos.');
     return;
   }
 
-  // Validar existencia de la palabra
   const wordExists = dictionary.categories[newWordCategory].some(entry => 
     entry.english.toLowerCase() === newWordEn.toLowerCase() || entry.spanish.toLowerCase() === newWordEs.toLowerCase()
   );
@@ -22,8 +20,7 @@ document.getElementById('addWordButton').addEventListener('click', function () {
     return;
   }
 
-  // Generar ID único
-  const newId = dictionary.categories[newWordCategory].length > 0 ? Math.max(...dictionary.categories[newWordCategory].map(word => word.id)) + 1 : 1;
+  const newId = dictionary.categories[newWordCategory].length + 1;
   const newWord = {
     id: newId,
     english: newWordEn,
@@ -31,6 +28,7 @@ document.getElementById('addWordButton').addEventListener('click', function () {
     example: newWordExample
   };
   dictionary.categories[newWordCategory].push(newWord);
+  localStorage.setItem('dictionary', JSON.stringify(dictionary));  // Guardar en localStorage
   alert('Palabra añadida correctamente.');
   
   // Actualizar el diccionario inmediatamente
@@ -61,4 +59,9 @@ function renderDictionary(words, order) {
       tableBody.appendChild(row);
     });
   }
+}
+
+function getWordsFromLocalStorage(category) {
+  const dictionaryFromStorage = JSON.parse(localStorage.getItem('dictionary')) || { categories: {} };
+  return dictionaryFromStorage.categories[category] || [];
 }

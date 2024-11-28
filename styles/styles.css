@@ -85,4 +85,11 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
   

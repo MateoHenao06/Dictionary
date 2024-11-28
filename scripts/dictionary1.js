@@ -1,4 +1,4 @@
-import { dictionary } from './dictionary.js';
+import { dictionary } from './dictionary2.js';
 
 document.getElementById('sortButton').addEventListener('click', function () {
   const selectedCategory = document.querySelector('input[name="category"]:checked')?.value;
